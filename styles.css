@@ -1,0 +1,406 @@
+/* Common Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111; /* Dark similar to black */
+    padding: 10px 20px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Black shadow */
+    height: 90px;
+    color: white; /* Ensures the text contrasts with the dark background */
+}
+
+
+.logo img {
+    margin-top: 15px;
+    height: 180px; /* Increase the logo height as needed */
+    width: auto;
+   
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: none;
+    
+}
+
+.desktop-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.desktop-menu > li {
+    position: relative;
+}
+
+.desktop-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.desktop-menu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 200px;
+    z-index: 10;
+}
+
+.desktop-menu .submenu li {
+    white-space: nowrap;
+}
+
+.desktop-menu .submenu a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.desktop-menu .menu-item:hover > .submenu,
+.desktop-menu .submenu:hover {
+    display: block;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    position: relative;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    left: 0;
+}
+
+.menu-toggle .hamburger::before {
+    top: -8px;
+}
+
+.menu-toggle .hamburger::after {
+    bottom: -8px;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -250px;  /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+.mobile-nav .mobile-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.mobile-nav .mobile-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mobile-nav .close-btn {
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Submenus for Mobile */
+.submenu-mobile {
+    position: fixed;
+    top: 0;
+    left: -250px;  /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background-color: #444;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 110;
+}
+
+.submenu-mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.submenu-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.submenu-mobile .back-btn {
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+    .desktop-nav {
+        display: block;
+    }
+
+    .desktop-menu {
+        display: flex;
+    }
+
+    .menu-toggle, .mobile-nav, .submenu-mobile {
+        display: none;
+    }
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    /* Submenu Overlay is handled within mobile-nav */
+    .submenu-mobile {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+/* Container for background */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Background image */
+.background-image {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.avif'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9; /* Adjust opacity as needed */
+    animation: zoomEffect 8s infinite alternate;
+}
+
+/* Zoom effect animation */
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Content inside the container */
+.container-content {
+    position: relative;
+    z-index: 1; /* Ensure it appears above the background */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        height: 60vh; /* Adjust height for mobile/tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 50vh; /* Further adjustment for smaller screens */
+    }
+}
+
+
+
+
+/* ------------------------------------------------about------------------------------------------------------------------------ */
+
+
+.about {
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    max-height: 80vh; /* To allow scrolling */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #00bcd4;
+    font-size: 2em;
+}
+
+.about p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.card {
+    width: 45%; /* Adjust the width to fit two cards in one row */
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 20px 20px 40px #bebebe, -20px -20px 40px #ffffff;
+}
+
+/* Adjust image size */
+.card img {
+    width: 96%; /* Makes the image smaller and fit within the card */
+    height: auto; /* Keeps the aspect ratio */
+    margin: 20px auto; /* Centers the image within the card */
+    display: block; /* Ensures proper spacing around the image */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: black;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.card-content a:hover {
+    background: #555;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Stacks cards vertically on smaller screens */
+    }
+}
+
+
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('images/header.jpg') center calc(50% - 60px) / cover no-repeat;
+    color: black;
+}
+
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}

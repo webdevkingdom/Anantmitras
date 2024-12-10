@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header with Submenu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.png" sizes="64x64" type="image/png">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Company Logo"></a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="desktop-menu">
+                <li class="menu-item">
+                    <a href="#">Services</a>
+                    <ul class="submenu">
+                        <li><a href="#">Websites</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Company</a>
+                    <ul class="submenu">
+                        <li><a href="about.html">Who we are</a></li>
+                        <li><a href="#">What we do</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Products</a>
+                    <ul class="submenu">
+                        <li><a href="#">Domain Registration</a></li>
+                        <li><a href="#">Web Hosting</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="hamburger"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-menu">
+            <li><a href="#" class="menu-item" data-submenu="services-submenu">Services</a></li>
+            <li><a href="#" class="menu-item" data-submenu="company-submenu">Company</a></li>
+            <li><a href="#" class="menu-item" data-submenu="products-submenu">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="close-btn" id="close-menu">Close</button>
+
+        <!-- Submenus for Mobile -->
+        <div id="services-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+
+        <div id="company-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">What we do</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+
+        <div id="products-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Domain Registration</a></li>
+                <li><a href="#">Web Hosting</a></li>
+                <li><a href="#">Web Development</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+    </div>
+
+    <div class="hero-section">
+        <h1>Welcome to Anantmitras Digital Marketing Agency</h1>
+        <p>Your trusted partner for innovative and results-driven digital marketing solutions.</p>
+    </div>
+
+    <section id="services" class="card-container">
+        <div class="card">
+            <img src="images/website.jpg" alt="Websites">
+            <div class="card-content">
+                <h3>Web Development</h3>
+                <p>We create stunning, responsive, and user-friendly websites tailored to your business needs, ensuring optimal performance and design.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/graphic.jpg" alt="Graphic Design">
+            <div class="card-content">
+                <h3>Graphic Design</h3>
+                <p>From logos to marketing materials, our creative team delivers impactful designs that resonate with your audience.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/seo.jpg" alt="SEO">
+            <div class="card-content">
+                <h3>Search Engine Optimization (SEO)</h3>
+                <p>Boost your online presence and drive more organic traffic with our proven SEO strategies tailored to your goals.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/social.jpg" alt="Social Media">
+            <div class="card-content">
+                <h3>Social Media Marketing</h3>
+                <p>Engage your audience and expand your brand's reach through targeted social media campaigns.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/ppc.jpg" alt="PPC Advertising">
+            <div class="card-content">
+                <h3>PPC Advertising</h3>
+                <p>Maximize your ROI with our data-driven pay-per-click campaigns that deliver measurable results.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/content.jpg" alt="Content Marketing">
+            <div class="card-content">
+                <h3>Content Marketing</h3>
+                <p>Build trust and authority with compelling, high-quality content tailored to your target audience.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

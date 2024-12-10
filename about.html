@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Company Logo"></a>
+        </div>
+        <nav class="desktop-nav">
+            <ul class="desktop-menu">
+                <li class="menu-item">
+                    <a href="#">Services</a>
+                    <ul class="submenu">
+                        <li><a href="#">Websites</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">SEO</a></li>
+                        <li><a href="#">Social Media</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Company</a>
+                    <ul class="submenu">
+                        <li><a href="#">Who we are</a></li>
+                        <li><a href="#">What we do</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Products</a>
+                    <ul class="submenu">
+                        <li><a href="#">Domain Registration</a></li>
+                        <li><a href="#">Web Hosting</a></li>
+                        <li><a href="#">Web Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="hamburger"></div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-menu">
+            <li><a href="#" class="menu-item" data-submenu="services-submenu">Services</a></li>
+            <li><a href="#" class="menu-item" data-submenu="company-submenu">Company</a></li>
+            <li><a href="#" class="menu-item" data-submenu="products-submenu">Products</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="close-btn" id="close-menu">Close</button>
+
+        <!-- Submenus for Mobile -->
+        <div id="services-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Websites</a></li>
+                <li><a href="#">Graphic Design</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+
+        <div id="company-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">What we do</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+
+        <div id="products-submenu" class="submenu-mobile">
+            <ul>
+                <li><a href="#">Domain Registration</a></li>
+                <li><a href="#">Web Hosting</a></li>
+                <li><a href="#">Web Development</a></li>
+            </ul>
+            <button class="back-btn">Back</button>
+        </div>
+    </div>
+
+    
+
+     <section class="about">
+        <h2>About</h2>
+        <p>
+            Anantmitras Digital Marketing Agency is dedicated to helping businesses thrive in the digital age.
+            We specialize in providing comprehensive digital marketing solutions tailored to meet the unique needs of our clients.
+            Our services include SEO, social media marketing, content creation, PPC advertising, and graphic designing,
+            all designed to enhance your online presence and drive measurable results.
+        </p>
+        <p>
+            At Anantmitras, we believe in the power of digital transformation.
+            Our team of experienced professionals is committed to delivering innovative strategies that not only reach your target audience
+            but also foster meaningful engagement and brand loyalty.
+            Whether you're a startup looking to make your mark or an established business aiming to scale new heights,
+            we're here to help you navigate the complexities of the digital landscape.
+        </p>
+        <p>
+            Partner with us, and let's build a digital future that works for you.
+        </p>
+    </section>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
