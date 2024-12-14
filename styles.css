@@ -677,14 +677,14 @@ hr{
     }
     
     .graphic-heading {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         color: #ffb144;
         margin-bottom: 10px;
     }
     
     .graphic-text {
-        font-size: 14px;
+        font-size: 16px;
         color: #f0f0f0;
         line-height: 1.5;
     }
