@@ -327,7 +327,7 @@ header {
 }
 
 .card {
-    width: 45%; /* Adjust the width to fit two cards in one row */
+    width: 30%; /* Adjust the width to fit two cards in one row */
     border-radius: 20px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
@@ -420,6 +420,8 @@ button {
     padding: 0;
     font-size: inherit;
     font-family: inherit;
+    margin-top: 30px;
+    margin-bottom: 0px;
    }
    
    button.learn-more {
@@ -495,3 +497,289 @@ button {
    button:hover .button-text {
     color: #fff;
    }
+
+
+
+
+
+/*-------------------------------------------------- footer Section -------------------------------------------------- */
+
+
+
+footer{
+    z-index: 1000;
+    width: 100%;
+    /* position: absolute; */
+    bottom: 0;
+    background: linear-gradient(to right, #00093c ,#2d0b00);
+    color: #fff;
+    margin-top: 50px;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    border-bottom-right-radius: 125px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 20%;
+    padding: 10px;
+}
+
+.col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+.phone-number {
+    margin-top: 1px; 
+}
+
+.col ul li{
+    
+    list-style: none;
+    margin-bottom: 12px;
+
+}
+.col ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.copyright {
+    text-align: center;
+}
+
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fac031;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media(max-width:700px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+        margin-left: 100px;
+    }
+    
+    .row p{
+        font-size: 16px;
+    }
+    .row h3{
+        font-size: 20px;
+    }
+    .row li{
+        font-size: 16px;
+    }
+    .contact-info{
+        font-size: 16px;
+        margin-left: -10px;
+    }
+    col:nth-child(1), .col:nth-child(2){
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 16px;
+    }
+    
+}
+
+
+
+
+
+    /* General styles for the graphic-container */
+    .graphic-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+    
+    .graphic-section {
+        background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+        border-radius: 20px;
+        margin-top: 10px;
+        box-shadow: 0 10px 20px rgb(3, 3, 3);
+        overflow: hidden;
+        width: calc(100% - 20px); /* Adjusted for responsive design */
+        max-width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .graphic-section:hover {
+        transform: scale(0.97);
+        box-shadow: 0 10px 12px rgb(0, 242, 255);
+    }
+    
+    .graphic-image {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-bottom: 15px;
+        object-fit: cover;
+    }
+    
+    .graphic-heading {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ffb144;
+        margin-bottom: 10px;
+    }
+    
+    .graphic-text {
+        font-size: 14px;
+        color: #f0f0f0;
+        line-height: 1.5;
+    }
+    
+    .cta-section {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    .cta-heading {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .cta-text {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .cta-button:hover {
+        background-color: #04f90090;
+    }
+    
+    /* Badge styles */
+    .graphic-section span {
+        position: absolute;
+        overflow: hidden;
+        width: 150px;
+        height: 150px;
+        top: -10px;
+        left: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .graphic-section span::before {
+        content: 'Premium';
+        position: absolute;
+        width: 150%;
+        height: 40px;
+        background-image: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+        transform: rotate(-45deg) translateY(-20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    }
+    
+    .graphic-section span::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        bottom: 0;
+        left: 0;
+        height: 10px;
+        z-index: -1;
+        box-shadow: 140px -140px #cc3f47;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .graphic-section {
+            width: calc(33.33% - 20px);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .graphic-section {
+            width: calc(50% - 20px);
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .graphic-section {
+            width: calc(100% - 20px);
+        }
+    }
+    
