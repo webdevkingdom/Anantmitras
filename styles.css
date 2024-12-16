@@ -556,6 +556,8 @@ footer{
     margin-bottom: 12px;
 
 }
+
+
 .col ul li a{
     text-decoration: none;
     color: #fff;
@@ -783,3 +785,78 @@ hr{
         }
     }
     
+
+/* From Uiverse.io by vinodjangid07 */
+/* .top-button {
+    position: fixed;
+    top: 95%; 
+    left: 90%;
+    transform: translateX(-50%) translateY(-100%); 
+    z-index: 1000; 
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px 6px rgb(2, 209, 255);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+
+@media (max-width: 480px) {
+    .top-button{
+        left: 90%;
+        width: 40px;
+        height: 40px;
+
+    }
+}
+
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.top-button:hover {
+    width: 140px;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.top-button:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.top-button::before {
+    position: absolute;
+    bottom: -30px; 
+    left: 20px; 
+    content: "Back to Top";
+    color: black;
+    font-size: 14px;
+    opacity: 0;
+    transition-duration: 0.3s;
+    text-align: left;
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%; 
+}
+
+.top-button:hover::before {
+    opacity: 1;
+    bottom: unset; 
+    left: 30px; 
+} */

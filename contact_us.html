@@ -7,6 +7,101 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/logo.png"  type="image/png">
 
+    <style>
+        .contact-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: black;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.2px);
+  -webkit-backdrop-filter: blur(8.2px);
+  border: 1px solid #369eff66;
+  width: 450px;
+  height: 550px;
+  padding: 20px;
+  position: relative;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form p {
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input, .textarea {
+  color: black;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea {
+  height: 4em;
+  resize: none;
+}
+
+button {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #286fb4;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.8s;
+}
+
+button:hover {
+  background-color: #00d0ff;
+}
+
+.svg {
+  filter: blur(40px);
+  z-index: -1;
+  position: absolute;
+  opacity: 90%;
+  animation: anim 3s infinite;
+}
+
+.path {
+  fill: #369eff;
+}
+
+@keyframes anim {
+  0%, 100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+    </style>
+
+
+
+
 </head>
 <body>
     <header>
@@ -95,6 +190,59 @@
         <p>Your trusted partner for innovative and results-driven Digital Marketing Solutions and Web Development.</p>
     </div>
 
+
+    
+    <!-- Contact Us Form Section -->
+    <section class="contact-us">
+        <form class="form" id="contact-form" onsubmit="sendToWhatsApp(event)">
+            <div class="content">
+                <p style="text-align: center; color: wheat; font-size: 30px;">Contact Us</p>
+                <div class="form-group">
+                    <input id="full-name" placeholder="Enter Full Name" type="text" class="input" required>
+                </div>
+                <div class="form-group">
+                    <input id="email" placeholder="Enter Email" type="email" class="input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <div class="form-group">
+                    <input id="mobile" placeholder="Enter Mobile Number" type="tel" class="input" maxlength="12" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" placeholder="Enter Message" class="textarea" style="color: black; height: 100px;" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <svg class="svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#4073ff" d="M56.8,-23.9C61.7,-3.2,45.7,18.8,26.5,31.7C7.2,44.6,-15.2,48.2,-35.5,36.5C-55.8,24.7,-73.9,-2.6,-67.6,-25.2C-61.3,-47.7,-30.6,-65.6,-2.4,-64.8C25.9,-64.1,51.8,-44.7,56.8,-23.9Z" transform="translate(100 100)" class="path"></path>
+                </svg>
+            </div>
+        </form>
+    </section>
+    
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();  // Prevent form submission
+    
+            // Get values from the form
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const mobile = document.getElementById('mobile').value;
+            const message = document.getElementById('message').value;
+    
+            // Construct the WhatsApp message
+            const messageText = `New Message Received On *ANANTMITRAS*\n\n` +
+                    `*Full Name*: ${fullName}\n` +
+                    `*Email*: ${email}\n` +
+                    `*Mobile*: ${mobile}\n` +
+                    `*Message*: ${message}`;
+            // WhatsApp phone number (change this to the recipient's number in international format)
+            const phoneNumber = '9172299600';  // Replace with your WhatsApp number
+    
+            // Construct the WhatsApp URL
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(messageText)}`;
+    
+            // Open WhatsApp with the pre-filled message
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
     
 
     
@@ -153,7 +301,16 @@
         <p class="copyright">&copy; 2024 Anantmitras. All rights reserved.</p>
     </footer>
     
+    <!-- <button class="top-button" id="topBtn" title="Go to top">↑</button> -->
 
+
+    <!-- <button class="top-button" id="topBtn" title="Go to top">
+        <svg class="svgIcon" viewBox="0 0 384 512">
+          <path
+            d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+          ></path>
+        </svg>
+      </button> -->
 
     
 

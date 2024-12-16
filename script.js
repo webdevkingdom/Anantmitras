@@ -63,3 +63,45 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+
+
+// // Get the button
+// let topButton = document.getElementById("topBtn");
+
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () {
+//     if (document.body.scrollTop > 100|| document.documentElement.scrollTop > 100) {
+//         topButton.style.display = "block";
+//     } else {
+//         topButton.style.display = "none";
+//     }
+// };
+
+// // When the user clicks the button, scroll to the top of the document
+// topButton.onclick = function () {
+//     // Get the current scroll position
+//     const startPosition = window.pageYOffset;
+    
+//     // Define the scroll duration (3 seconds)
+//     const duration = 200; // 3000 milliseconds = 3 seconds
+    
+//     let startTime = null;
+
+//     // Animation function to smoothly scroll
+//     function scrollToTop(currentTime) {
+//         if (startTime === null) startTime = currentTime;
+//         const timeElapsed = currentTime - startTime;
+//         const progress = Math.min(timeElapsed / duration, 1);
+
+//         window.scrollTo(0, startPosition * (1 - progress));
+
+//         if (timeElapsed < duration) {
+//             requestAnimationFrame(scrollToTop); // Continue scrolling
+//         }
+//     }
+
+//     // Start the animation
+//     requestAnimationFrame(scrollToTop);
+// };
