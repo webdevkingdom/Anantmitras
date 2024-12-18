@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana (sans-serif);
     
 }
 
@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #111; /* Dark similar to black */
+    background-color: #111111; /* Dark similar to black */
     padding: 10px 20px;
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Black shadow */
